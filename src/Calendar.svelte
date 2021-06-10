@@ -242,7 +242,7 @@
 
 <div class="calendar calendar-{theme}">
   <div class="calendar-wrap">
-    <CalendarHeader />
+    <CalendarHeader on:close />
     <CalendarBody />
   </div>
 

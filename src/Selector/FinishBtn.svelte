@@ -1,12 +1,15 @@
 <script>
   import IconCheckmark from "../@icons/Checkmark.svelte";
 
-  import { getContext, onMount } from "svelte";
+  import { getContext, onMount, createEventDispatcher } from "svelte";
   import noun from "../i18n";
+
+  const dispatch = createEventDispatcher();
 
   let praecoxCalendarData = getContext("praecoxCalendarData");
   function handleClick() {
     $praecoxCalendarData.pickerDone = true;
+    dispatch("close");
   }
   onMount(() => {
     $praecoxCalendarData.pickerDone = false;

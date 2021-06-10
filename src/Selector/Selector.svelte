@@ -24,6 +24,6 @@
   <Prev />
   <Next />
 
-  <FinishBtn />
+  <FinishBtn on:close />
 
 </div>
